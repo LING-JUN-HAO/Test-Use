@@ -1,6 +1,7 @@
 require("dotenv").config();
 
-if(!process.env.RENDER){
+console.log('目前環境變數:', process.env.RENDER);
+if(process.env.RENDER){
   console.log('目前在 Render 環境下運行，使用 Render 環境變數')
 }else{
   const dotenv = require('dotenv')
