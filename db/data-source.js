@@ -1,7 +1,11 @@
+require("dotenv").config();
 
-const dotenv = require('dotenv')
-const result = dotenv.config()
-console.log(result, 'dotenv config result');
+if(!process.env.RENDER){
+  console.log('目前在 Render 環境下運行，使用 Render 環境變數')
+}else{
+  const dotenv = require('dotenv')
+  const result = dotenv.config()
+}
 
 const { DataSource } = require("typeorm");
 const Users = require("../entities/Users");
