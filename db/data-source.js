@@ -1,4 +1,7 @@
-require("dotenv").config();
+
+const dotenv = require('dotenv')
+const result = dotenv.config()
+console.log(result, 'dotenv config result');
 
 const { DataSource } = require("typeorm");
 const Users = require("../entities/Users");
